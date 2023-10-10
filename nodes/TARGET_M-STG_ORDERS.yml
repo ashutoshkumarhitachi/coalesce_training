@@ -99,7 +99,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5db219a1-1a8c-4490-a9d7-56abf65592a0
                     stepCounter: 39619b2c-9042-4677-aa71-36d33bc10a8c
-                transform: ""
+                transform: lower("ORDERS"."O_ORDERPRIORITY")
           - columnReference:
               columnCounter: c0879dac-ccbf-47ed-b933-6f2dba2bed87
               stepCounter: 287f6e17-056f-4223-9d0a-75ef8245b0d0
