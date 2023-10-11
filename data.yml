@@ -1,6 +1,13 @@
 defaultStorageMapping: TARGET_M
 installedPackages: {}
-jobs: {}
+jobs:
+  Job-1:
+    excludeSelector: "{ location: TARGET_M name: STG_PART }"
+    id: 1
+    includeSelector: "{ location: TARGET_M name: STG_CUSTOMER } OR { location: TARGET_M name: STG_PART } OR { location: TARGET_M name: STG_ORDERS } OR { location: TARGET_M name: STG_PARTSUPP } OR { location: TARGET_M name: STG_SUPPLIER } OR { location: TARGET_M name: DIM_CUSTOMER }"
+    name: New Job
+    steps: []
+    subgraphs: []
 locations:
   SOURCE_M:
     mappingDefinitions:
@@ -1474,5 +1481,10 @@ stepTypes:
             {% endif %}
     name: Persistent Stage
     version: 1
-subgraphs: {}
+subgraphs:
+  Subgraph-1:
+    id: "1"
+    name: New Subgraph
+    steps:
+      - 0d41ec8a-c75b-4df8-b012-bc7162efe64f
 version: 2
